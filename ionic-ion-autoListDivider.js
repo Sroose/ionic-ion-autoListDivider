@@ -13,7 +13,8 @@ angular.module('ionic.ion.autoListDivider',[])
       
 			var doDivide = function(){
 				var divideFunction = scope.$apply(attrs.autoListDividerFunction) || defaultDivideFunction;
-				var divideKey = divideFunction(key);
+				var divideObject = scope.$apply(attrs.autoListDividerObject) || autoListDividerValue;
+				var divideKey = divideFunction(divideObject);
 				
 				if(divideKey != lastDivideKey) { 
 					var contentTr = angular.element("<div class='item item-divider'>"+divideKey+"</div>");
