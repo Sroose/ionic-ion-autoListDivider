@@ -49,6 +49,16 @@ A custom function to calculate the divider based on the passed in value can be s
 </ion-list>
 ```
 
+# Example: Custom Divider Function with different sorting criteria
+If different sorting criteria are needed, you also need different divider values (eg name, age,..). To cope with this, pass a data object holding the different keys you'll need:
+
+```
+<ion-list>
+        <ion-item auto-divider auto-divider-object="item.user" auto-divider-function="dividerFunction" class="item-avatar" ng-repeat="item in items">
+	</ion-item>
+</ion-list>
+```
+
 In your controller...
 
 ```
